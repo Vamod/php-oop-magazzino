@@ -10,14 +10,6 @@ class EdizioneLimitata extends Libro {
         $this->edizione = $_edizione;
         $this->anno = $_anno;
         $this->contenuti_extra = $_contenuti_extra;
+    }
 
-    }
-    public function uniqueBook(){
-        if($this->numero_copie != 1){
-            die("Non è l'unico libro");
-        }if(empty($this->prezzo)){
-            echo '<br>'.'manca il prezzo';
-        }
-        return $this->prezzo + $this->prezzo * 20 / 100;
-    }
 }
